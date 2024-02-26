@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Movie = ({ title, coverImg, summary, genres }) => {
     return (
         <div>
-            <h2>{title}</h2>
+            <h2>
+                <Link to="/movie">{title}</Link>
+            </h2>
             <img src={coverImg} alt="Image none." />
             <p>{summary}</p>
 
@@ -12,7 +15,6 @@ const Movie = ({ title, coverImg, summary, genres }) => {
                     <li key={genre}>{genre}</li>
                 ))}
             </ul>
-            <hr />
         </div>
     );
 };
