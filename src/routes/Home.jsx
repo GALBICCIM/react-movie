@@ -22,7 +22,7 @@ const Home = () => {
             ) : (
                 <div>
                     {movies.map((movie) => (
-                        <Movie key={movie.id} title={movie.title} coverImg={movie.medium_cover_image} summary={movie.summary} genres={movie.genres} />
+                        <Movie key={movie.id} movieId={movie.id} title={movie.title} coverImg={movie.medium_cover_image} summary={movie.summary} genres={movie.genres} />
                     ))}
                 </div>
             )}
